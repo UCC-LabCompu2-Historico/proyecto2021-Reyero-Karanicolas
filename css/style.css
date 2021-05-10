@@ -1,0 +1,133 @@
+*{
+    margin:0; padding:0;
+}
+body{
+    width: 1366px;
+    height: 768px;
+    background: whitesmoke;
+}
+header{
+    width: 1366px;
+    height: 100px;
+    background: black;  }
+.wrapper{
+    width: 90%;
+    max-width: 1000px;
+    margin:auto; }
+header .logo{
+    font-family: "spaceage", serif;
+    color: whitesmoke;
+    font-size: 35px;
+    line-height: 100px;
+    float: left;    }
+header nav{
+    float: right;
+    line-height: 100px; }
+header nav a{
+    position: center;
+    right: 200px;
+    font-family: spac, serif;
+    letter-spacing:5px ;
+    display:inline-block;
+    color:white;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 15px;
+    font-weight: bold;
+    -webkit-transition:all 2s ease;
+    -o-transition:all 2s ease;
+    transition:all 2s ease; }
+header nav a:hover{
+    text-decoration: underline; }
+section{
+    width: 1366px;
+    height: 768px;
+    background: whitesmoke;
+}
+section article .slidershow{
+    width: 1366px;
+    height: 450px;
+    overflow: hidden;   }
+section article .navigation{
+    position: absolute;
+    bottom: 150px;
+    left: 400px;
+    display: flex;  }
+section article .bar{
+    width:100px;
+    height:10px;
+    border:1px solid #fff;
+    margin: 4px;
+    cursor: pointer;
+    transition: 2s;   }
+section article .bar:hover{
+    background: white;
+    visibility: hidden; }
+input[name="r"]{
+    position: absolute;
+    visibility: hidden; }
+section article .slides{
+    width: 500%;
+    height: 100%;
+    display: flex;  }
+section article .slide{
+    width: 20%;
+    transition: 0.6s;   }
+section article .img{
+    width: 100%;
+    height: 100%;   }
+#r1:checked ~ .s1{
+    margin-left:0;  }
+#r2:checked ~ .s1{
+    margin-left:-20%;   }
+#r3:checked ~ .s1{
+    margin-left:-40%;   }
+#r4:checked ~ .s1{
+    margin-left:-60%;   }
+#r5:checked ~ .s1{
+    margin-left:-80%;   }
+section aside{
+    float: left;
+    margin-top: 0px;
+    margin-left:50px;
+    margin-bottom:50px;
+    width: 720px;
+    height: 300px;
+    font-family: spac, serif;
+    background: whitesmoke; }
+section aside h1{
+    text-align: center;
+    letter-spacing: 1px}
+
+article nav{
+    float: right;
+    margin-top: 65px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    width: auto;
+    height: auto;
+    background: whitesmoke; }
+section canvas{
+    background: black;
+}
+footer{
+    font-family: spac, serif;
+    color:black;
+    text-align: center;
+    line-height: 100px;
+}
+div nav{
+    font-family: spac, serif;
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+article div{
+    font-family: spac, serif;
+    color: black;
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 2px;
+}

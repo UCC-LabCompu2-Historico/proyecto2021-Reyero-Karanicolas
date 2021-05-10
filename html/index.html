@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Space Travel</title>
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/font.css">
+        <link rel="icon" href="../images/Icon.ico">
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <div class="logo">Space Travel</div>
+                <nav>
+                    <a href="index.html">home</a>
+                    <a href="rockets.html">rockets</a>
+                    <a href="launch.html">launch</a>
+                    <a href="about.html">about</a>
+                </nav>
+            </div>
+        </header>
+        <section>
+        <article>
+            <div class="slidershow middle">
+                <div class="slides">
+                    <input type="radio" name="r" id="r1">
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+                    <input type="radio" name="r" id="r4">
+                    <input type="radio" name="r" id="r5">
+                    <div class="slide s1">
+                    <img src="../images/4.jpg" alt=" ">
+                    </div>
+                    <div class="slide">
+                    <img src="../images/1.jpg" alt=" ">
+                    </div>
+                    <div class="slide">
+                    <img src="../images/3.jpg" alt=" ">
+                    </div>
+                    <div class="slide">
+                    <img src="../images/2.jpg" alt=" ">
+                    </div>
+                    <div class="slide">
+                    <img src="../images/5.jpg" alt=" ">
+                    </div>
+                </div>
+                <div class="navigation">
+                    <label for="r1" class="bar"></label>
+                    <label for="r2" class="bar"></label>
+                    <label for="r3" class="bar"></label>
+                    <label for="r4" class="bar"></label>
+                    <label for="r5" class="bar"></label>
+                </div>
+            </div>
+        </article>
+        <aside>
+            <h1> how long it takes ?</h1>
+            <div class="custom-select" style="width:200px;">
+                <select  id="list 1" >
+                    <option value="0">Destination:</option>
+                    <option value="384400000">Moon</option>
+                    <option value="56000000000">Mars</option>
+                    <option value="147000000000">Sun</option>
+                    <option value="594000000000">Jupiter</option>
+                    <option value="40000000000">Venus</option>
+                    <option value="1.2488e+17">EGS8p7</option>
+                    <option value="2.40019e+16">Andromeda</option>
+                    <option value="8.14664e+16">Sirio</option>
+                    <option value="1.041e+17">Ross 128 b</option>
+                    <option value="4.1315e+19">Alfa Centauri C</option>
+                </select>
+            </div>
+            <div class="custom-select" style="width:200px;">
+                <select id="list 2" >
+                    <option value="0">Vehicle:</option>
+                    <option value="16093.33">New horizon</option>
+                    <option value="73888.77">Juno</option>
+                    <option value="5127.77">Mariner 4</option>
+                    <option value="4794.72">Voyager 1</option>
+                    <option value="48277.77">Galileo</option>
+                    <option value="299999999">Photon Rocket</option>
+                </select>
+            </div>
+            <button type="button" >launch!</button>
+            <a href="canvas.html">canvas</a>
+            </aside>
+            <article>
+            <nav>
+            <video width="500" height=290" controls preload loop>
+                <source src="../Video/Space%20Travel.mp4" type="video/mp4">
+            </video>
+            </nav>
+
+            </article>
+        </section>
+        <footer>
+        &copy 2020 space travel by Reyero-Karanicolas
+        </footer>
+    </body>
+</html>
