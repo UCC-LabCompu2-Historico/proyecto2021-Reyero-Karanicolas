@@ -1,5 +1,5 @@
 # Exploracion espacial
-Esta pagina corresponde a una web para calcular el area de figuras geometricas
+Esta pagina corresponde a una web para calcular distancias.
 
 ## Autores
 * Karanicolas, Agustin
