@@ -1,3 +1,6 @@
+function launch(){
+  alert(document.getElementById("list 1").value/document.getElementById("list 2").value);
+}
 canvas = document.getElementById("canvas");
 canvas.width = 1366;
 canvas.height =768;

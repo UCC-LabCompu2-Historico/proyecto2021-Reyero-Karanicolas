@@ -2,6 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="keywords" content="space, travel, rocket"/>
+        <meta name="description" content="Webpage of space exploration"/>
+        <meta name="author" content="Karanicolas Agustin & Joaquin Reyero " />
         <title>Space Travel</title>
         <link rel="stylesheet" href="../css/style.css">
         <link rel="stylesheet" href="../css/font.css">
@@ -81,7 +84,12 @@
                     <option value="299999999">Photon Rocket</option>
                 </select>
             </div>
-            <button type="button" >launch!</button>
+            <button onclick="launch()" >launch!</button>
+            <script>
+                function launch(){
+                alert(document.getElementById("list 1").value/document.getElementById("list 2").value);
+                }
+            </script>
             <a href="canvas.html">canvas</a>
             </aside>
             <article>
@@ -94,7 +102,7 @@
             </article>
         </section>
         <footer>
-        &copy 2020 space travel by Reyero-Karanicolas
+        &copy 2021 space travel by Reyero-Karanicolas
         </footer>
     </body>
 </html>
