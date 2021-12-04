@@ -1,6 +1,35 @@
-function launch(){
-  alert(document.getElementById("list 1").value/document.getElementById("list 2").value);
+function saveVehicle(rocket) {
+  localStorage.setItem("cohete", rocket);
 }
+
+function tomarDestination(){
+  var destination=localStorage.getItem("destino");
+  document.getElementById("list 1").value=destination;
+  document.getElementById("aCompletarD").innerHTML=destination;
+}
+
+function tomarVehicle(){
+  var rocket=localStorage.getItem("cohete");
+  document.getElementById("list 2").value=rocket;
+  document.getElementById("aCompletarV").innerHTML=rocket;
+}
+
+function saveDestination(destination) {
+  localStorage.setItem("destino", destination);
+}
+
+function launch(){
+  if (document.getElementById("list 1").value == 0)
+    alert("No selecciono el destino");
+  if (document.getElementById("list 2").value == 0)
+    alert("No selecciono el vehiculo");
+  else{
+    var time = (document.getElementById("list 1").value)/document.getElementById("list 2").value;
+    alert("El viaje tomo : "+ time/86400 + " dias");
+    window.location.href = "canvas.html";
+  }
+}
+
 canvas = document.getElementById("canvas");
 canvas.width = 1366;
 canvas.height =768;
@@ -79,6 +108,7 @@ class SmokeTrail {
   constructor(rocket) {
     this.rocket = rocket;
     this.smokes = [];
+
     this.smokesPerAnimation = 25;
   }
 
@@ -96,6 +126,7 @@ class SmokeTrail {
           || smoke.age >= smoke.lifetime) {
 
         smokes.splice(x, 1);
+        x--;
       }
 
       smoke.animate();
@@ -108,10 +139,25 @@ class Rocket {
     this.color = "black";
     this.width = 10;
     this.height = 20;
-    this.acceleration = new Vector(0, -.15);
-
+    if (localStorage.getItem("cohete") == 299999999){
+      this.acceleration = new Vector(0,-10);
+    }
+    if (localStorage.getItem("cohete") == 73888.77){
+      this.acceleration = new Vector(0,-1);
+    }
+    if (localStorage.getItem("cohete") == 48277.77){
+      this.acceleration = new Vector(0,-.70);
+    }
+    if (localStorage.getItem("cohete") == 16093.33){
+      this.acceleration = new Vector(0,-.30);
+    }
+    if (localStorage.getItem("cohete") == 5127.77){
+      this.acceleration = new Vector(0,-.10);
+    }
+    if (localStorage.getItem("cohete") == 4794.72){
+      this.acceleration = new Vector(0,-.3);
+    }
     this.smokeTrail = new SmokeTrail(this);
-
     this.reset();
   }
 
@@ -144,4 +190,4 @@ function loop() {
   rocket.animate();
 }
 
-setInterval(loop, 1000/60);
+setInterval(loop,1000/60);

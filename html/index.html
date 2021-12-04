@@ -59,7 +59,7 @@
         <aside>
             <h1> how long it takes ?</h1>
             <div class="custom-select">
-                <select  id="list 1" >
+                <select  id="list 1" onChange="saveDestination(this.value)">
                     <option value="0">Destination:</option>
                     <option value="384400000">Moon</option>
                     <option value="56000000000">Mars</option>
@@ -74,10 +74,10 @@
                 </select>
             </div>
             <div class="custom-select">
-                <select id="list 2" >
+                <select id="list 2" onChange="saveVehicle(this.value)">
                     <option value="0">Vehicle:</option>
                     <option value="16093.33">New horizon</option>
-                    <option value="73888.77">Juno</option>
+                    <option value="69444">Juno</option>
                     <option value="5127.77">Mariner 4</option>
                     <option value="4794.72">Voyager 1</option>
                     <option value="48277.77">Galileo</option>
@@ -86,7 +86,6 @@
             </div>
             <button onclick="launch()" >launch!</button>
             <script src="../js/canvas.js"></script>
-            <a href="canvas.html">canvas</a>
             </aside>
             <article>
             <nav>

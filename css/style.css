@@ -14,9 +14,7 @@ header{
     width: 90%;
     max-width: 1000px;
     margin:auto; }
-.custom-select{
-    width: 200px;
-}
+
 header .logo{
     font-family: "spaceage", serif;
     color: whitesmoke;
@@ -134,4 +132,3 @@ article div{
     font-size: 50px;
     letter-spacing: 2px;
 }
-
