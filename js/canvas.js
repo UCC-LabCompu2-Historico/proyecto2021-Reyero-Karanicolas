@@ -146,6 +146,8 @@ class Rocket {
     this.color = "black";
     this.width = 10;
     this.height = 20;
+
+    //Setea la aceleracion del cohete dependiendo de la opcion elegida en index
     if (localStorage.getItem("cohete") == 299999999){
       this.acceleration = new Vector(0,-10);
     }
