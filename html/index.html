@@ -59,7 +59,7 @@
     <aside>
         <h1> how long it takes ?</h1>
         <div class="custom-select">
-            <select id="list 1" onChange="saveDestination(this.value)">
+            <select id="list 1">
                 <label> for="list 1" Lista destino:</label>
                 <option value="0">Destination:</option>
                 <option value="384400000">Moon</option>
@@ -75,7 +75,7 @@
             </select>
         </div>
         <div class="custom-select">
-            <select id="list 2" onChange="saveVehicle(this.value)">
+            <select id="list 2">
                 <label>for="list 2" Lista vehículo:</label>
                 <option value="0">Vehicle:</option>
                 <option value="16093.33">New horizon</option>
@@ -88,12 +88,19 @@
         </div>
         <div class="custom-select">
             <button onclick="launch()">launch!</button>
+            <button onclick="redireccionar()">Reset</button>
+        </div>
+        <div class="canvas">
+            <canvas id="canvas"></canvas>
         </div>
         <script src="../js/canvas.js"></script>
     </aside>
     <article>
         <nav>
-            <iframe width="520" height="315" src="https://www.youtube.com/embed/PLcE3AI9wwE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="520" height="439" src="https://www.youtube.com/embed/PLcE3AI9wwE"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
         </nav>
     </article>
 </section>
