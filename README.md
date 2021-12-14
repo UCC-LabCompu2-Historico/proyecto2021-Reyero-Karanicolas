@@ -1,11 +1,14 @@
 # Exploración espacial
+
 Esta página corresponde a una web para calcular distancias.
 
 ## Autores
+
 * Karanicolas, Agustin
 * Reyero, Joaquin
 
 ## Tecnologías Usadas
+
 * HTML5
 * CCS3
 * JS

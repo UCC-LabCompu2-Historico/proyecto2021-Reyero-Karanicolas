@@ -1,27 +1,47 @@
-//Guarda vehículo en localstorage
+/**
+ * Guarda vehiculo en local storage
+ * @method saveVehicle
+ * @param {string} rocket - vehiculo
+ */
 function saveVehicle(rocket) {
     localStorage.setItem("cohete", rocket);
 }
 
-//Guarda destino en localstorage
+
+/**
+ * Guarda destino en local storage
+ * @method saveDestination
+ * @param {string} destination - destino
+ */
 function saveDestination(destination) {
     localStorage.setItem("destino", destination);
 }
 
-//obtener destino en localstorage
+
+/**
+ * toma destino en local storage
+ * @method tomarDestination
+ */
 function tomarDestination() {
     var destination = localStorage.getItem("destino");
     document.getElementById("list 1").value = destination;
 }
 
-//obtener vehículo
-//en localstorage
+
+/**
+ * toma destino en local storage
+ * @method tomarVehicle
+ */
 function tomarVehicle() {
     var rocket = localStorage.getItem("cohete");
     document.getElementById("list 2").value = rocket;
 }
 
-//Verifica si el dato es valido y redirecciona al canvas
+
+/**
+ * Ejecuta canvas
+ * @method launch
+ */
 function launch() {
     if (document.getElementById("list 1").value == 0)
         alert("No selecciono el destino");
@@ -34,6 +54,7 @@ function launch() {
     }
 }
 
+
 canvas = document.getElementById("canvas");
 canvas.width = 1366;
 canvas.height = 768;
@@ -43,15 +64,20 @@ context.font = "30px Arial";
 context.fillText("HOLA", 0, 0);
 
 
-//Resetea el canvas al estado inicial
+/**
+ * Resetea canvas
+ * @method clearCanvas
+ */
 function clearCanvas() {
-    context.font = "30px Arial";
-    context.fillText("HOLA", 0, 0);
     context.fillStyle = "rgb(32, 32, 32)";
     context.fillRect(0, 0, canvas.width, canvas.height);
 }
 
-//Setea coordenadas X e Y
+
+/**
+ * Setea coordenadas
+ * @method Vector
+ */
 class Vector {
     constructor(x, y) {
         this.x = x;
@@ -64,7 +90,16 @@ class Vector {
     }
 }
 
-//Representa los limites del canvas, devuelve verdadero si se puede ver en canvas
+
+/**
+ * Representa los limites del canvas
+ * @method inbounds
+ * @param {number} x - coordenada en eje x
+ * @param {number} y - coordenada en eje x
+ * @param {number} w - largo
+ * @param {number} h - ancho
+ * @return Valor devuelve verdadero si se puede ver en canvas
+ */
 function inbounds(x, y, w, h) {
     if (x > canvas.width || (x + w) < 0 || (y + h) < 0 || y > canvas.height) {
         return false;
@@ -73,13 +108,22 @@ function inbounds(x, y, w, h) {
     }
 }
 
-//Devuelve un numero aleatorio en un rango
+
+/**
+ * toma un valor aleatorio
+ * @method random
+ * @param {number} min - valor minimo
+ * @param {number} max - valor maximo
+ * @return Valor en el rango especificado
+ */
 function random(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-//Representa una particula de humo
-//Cada particula se representa con un cuadrado que tiene una edad y un tiempo de duracion
+/**
+ * Representa una particula de humo, cada una se representa con un cuadrado que tiene una edad y un tiempo de duracion
+ * @method Smoke
+ */
 class Smoke {
     constructor(x, y) {
         this.color = "red";
@@ -99,7 +143,10 @@ class Smoke {
         this.velocity = new Vector(random(-maxVelocity, maxVelocity), random(0, maxVelocity));
     }
 
-    //Setea particulas de humo y las dibuja en el canvas
+    /**
+     * Setea particulas de humo y las dibuja en el canvas
+     * @method animate
+     */
     animate() {
         var position = this.position;
         var velocity = this.velocity;
@@ -117,17 +164,23 @@ class Smoke {
     }
 }
 
-//Representa un grupo de particulas de humo que trabajan conjuntamente
+
+/**
+ * Representa un grupo de particulas de humo que trabajan conjuntamente
+ * @method SmokeTrail
+ */
 class SmokeTrail {
-    //Se alinean las particulas con el cohete
     constructor(rocket) {
         this.rocket = rocket;
         this.smokes = [];
-        //numero de particulas
         this.smokesPerAnimation = 25;
     }
 
-    //Setea nuevas particualas y elimina las que superiaron su periodo de vida o estan fuera del canvas
+    /**
+     * Setea nuevas particualas y elimina las que superiaron su periodo de vida o estan fuera del canvas
+     * @method animate
+     */
+    //
     animate() {
         var smokes = this.smokes;
         var rocket = this.rocket;
@@ -149,14 +202,18 @@ class SmokeTrail {
     }
 }
 
-//Representa el cohete con una posicion, velocidad, aceleracion y el humo que expulsa
+
+/**
+ * Representa el cohete con una posicion, velocidad, aceleracion y el humo que expulsa
+ * @method SmokeTrail
+ */
 class Rocket {
     constructor() {
         this.color = "black";
         this.width = 10;
         this.height = 20;
 
-        //Setea la aceleracion del cohete dependiendo de la opcion elegida en index
+
         if (localStorage.getItem("cohete") == 299999999) {
             this.acceleration = new Vector(0, -10);
         }
@@ -176,16 +233,22 @@ class Rocket {
             this.acceleration = new Vector(0, -.3);
         }
         this.smokeTrail = new SmokeTrail(this);
-        this.reset(); //setea posicion inicial
+        this.reset();
     }
 
-    //Posiciona el cohete abajo del canvas
+    /**
+     * Posiciona el cohete abajo del canvas
+     * @method reset
+     */
     reset() {
         this.position = new Vector((canvas.width - this.width) / 2, canvas.height - this.height);
         this.velocity = new Vector(0, 0);
     }
 
-    //Setea las propiedades del cohete
+    /**
+     * Setea las propiedades del cohete
+     * @method animate
+     */
     animate() {
         var position = this.position;
 
@@ -205,11 +268,17 @@ class Rocket {
 
 rocket = new Rocket();
 
-//Setea el canvas y dibuja el cohete
+/**
+ * Setea el canvas y dibuja el cohete
+ * @method loop
+ */
 function loop() {
     clearCanvas();
     rocket.animate();
 }
 
-//Setea canvas para que se repita a 60fps
+/**
+ * Setea canvas para que se repita a 60fps
+ * @method setInterval
+ */
 setInterval(loop, 1000 / 60);
