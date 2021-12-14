@@ -78,6 +78,7 @@ section article .slidershow {
 }
 
 section article .navigation {
+    margin-bottom: -10px;
     position: absolute;
     bottom: 150px;
     left: 400px;
@@ -170,7 +171,6 @@ section canvas {
 }
 
 footer {
-
     font-family: spac, serif;
     color: black;
     text-align: right;
