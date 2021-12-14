@@ -7,13 +7,14 @@ function redireccionar() {
 }
 
 var contador = 0;
+
 /**
  * Ejecuta canvas
  * @method launch
  */
 function launch() {
-    if (contador >0)
-        redireccionar();
+    if (contador > 0)
+        alert("Si desea realizar otro lanzamiento pulse Reset");
     else {
         var time = (document.getElementById("list 1").value) / document.getElementById("list 2").value;
         alert("El viaje tomo : " + time / 86400 + " dias");
