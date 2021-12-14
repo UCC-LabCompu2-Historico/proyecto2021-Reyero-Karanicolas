@@ -1,4 +1,4 @@
-//Guarda vehiculo en localstorage
+//Guarda vehículo en localstorage
 function saveVehicle(rocket) {
     localStorage.setItem("cohete", rocket);
 }
@@ -14,7 +14,8 @@ function tomarDestination() {
     document.getElementById("list 1").value = destination;
 }
 
-//obtener vehiculo en localstorage
+//obtener vehículo
+//en localstorage
 function tomarVehicle() {
     var rocket = localStorage.getItem("cohete");
     document.getElementById("list 2").value = rocket;
@@ -25,7 +26,7 @@ function launch() {
     if (document.getElementById("list 1").value == 0)
         alert("No selecciono el destino");
     if (document.getElementById("list 2").value == 0)
-        alert("No selecciono el vehiculo");
+        alert("No selecciono el vehículo");
     else {
         var time = (document.getElementById("list 1").value) / document.getElementById("list 2").value;
         alert("El viaje tomo : " + time / 86400 + " dias");
