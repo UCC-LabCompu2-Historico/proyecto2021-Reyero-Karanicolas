@@ -61,8 +61,6 @@ canvas.width = 1366;
 canvas.height = 768;
 context = canvas.getContext("2d");
 
-context.font = "30px Arial";
-context.fillText("HOLA", 0, 0);
 
 
 /**

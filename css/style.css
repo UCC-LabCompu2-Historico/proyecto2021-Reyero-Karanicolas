@@ -46,6 +46,7 @@ section{
     height: 768px;
     background: whitesmoke;
 }
+
 section aside .custom-select{
     margin: 30px;
     margin-left: 250px;
@@ -53,7 +54,8 @@ section aside .custom-select{
 section article .slidershow{
     width: 1366px;
     height: 450px;
-    overflow: hidden;   }
+    overflow: hidden;
+    margin-bottom: 10px;}
 section article .navigation{
     position: absolute;
     bottom: 150px;
@@ -107,9 +109,9 @@ section aside h1{
 
 article nav{
     float: right;
-    margin-top: 65px;
-    margin-right: 50px;
-    margin-bottom: 50px;
+    margin-top: 0px;
+    margin-right: 65px;
+    margin-bottom: 0px;
     width: auto;
     height: auto;
     background: whitesmoke; }
