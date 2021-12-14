@@ -166,14 +166,14 @@ article nav {
 }
 
 section canvas {
-    background: black;
+    background: whitesmoke;
 }
 
 footer {
-    margin: 140px;
+
     font-family: spac, serif;
     color: black;
-    text-align: center;
+    text-align: right;
     line-height: 100px;
 }
 

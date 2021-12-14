@@ -21,7 +21,7 @@ function launch() {
 
         canvas = document.getElementById("canvas");
         canvas.width = 600
-        canvas.height = 240
+        canvas.height = 234
         context = canvas.getContext("2d");
 
 
@@ -30,7 +30,7 @@ function launch() {
          * @method clearCanvas
          */
         function clearCanvas() {
-            context.fillStyle = "rgb(32, 32, 32)";
+            context.fillStyle = "whitesmoke";
             context.fillRect(0, 0, canvas.width, canvas.height);
         }
 
@@ -178,7 +178,7 @@ function launch() {
                 if (document.getElementById("list 2").value == 299999999) {
                     this.acceleration = new Vector(0, -10);
                 }
-                if (document.getElementById("list 2").value == 73888.77) {
+                if (document.getElementById("list 2").value == 69444) {
                     this.acceleration = new Vector(0, -1);
                 }
                 if (document.getElementById("list 2").value == 48277.77) {
