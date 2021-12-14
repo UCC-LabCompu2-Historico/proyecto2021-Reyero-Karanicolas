@@ -46,6 +46,10 @@ section{
     height: 768px;
     background: whitesmoke;
 }
+section aside .custom-select{
+    margin: 30px;
+    margin-left: 250px;
+}
 section article .slidershow{
     width: 1366px;
     height: 450px;

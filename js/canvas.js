@@ -43,6 +43,7 @@ function tomarVehicle() {
  * @method launch
  */
 function launch() {
+    var select = 0;
     if (document.getElementById("list 1").value == 0)
         alert("No selecciono el destino");
     if (document.getElementById("list 2").value == 0)
@@ -51,9 +52,9 @@ function launch() {
         var time = (document.getElementById("list 1").value) / document.getElementById("list 2").value;
         alert("El viaje tomo : " + time / 86400 + " dias");
         window.location.href = "canvas.html";
+        select =1;
     }
 }
-
 
 canvas = document.getElementById("canvas");
 canvas.width = 1366;
