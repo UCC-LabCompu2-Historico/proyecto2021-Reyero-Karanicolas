@@ -29,7 +29,7 @@ function tomarDestination() {
 
 
 /**
- * toma destino en local storage
+ * toma vehiculo en local storage
  * @method tomarVehicle
  */
 function tomarVehicle() {
